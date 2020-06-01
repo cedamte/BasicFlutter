@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Welcome to Flutter",
+      theme: ThemeData(primaryColor: Colors.white),
       home: RandomWords(),
     );
   }
@@ -102,7 +103,7 @@ class RandomWordState extends State<RandomWords> {
         // Add 20 lines from here...
         builder: (BuildContext context) {
           final Iterable<ListTile> tiles = _saved.map(
-                (WordPair pair) {
+            (WordPair pair) {
               return ListTile(
                 title: Text(
                   pair.asPascalCase,
